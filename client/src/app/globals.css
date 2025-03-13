@@ -117,6 +117,10 @@ dark {
     @apply border-border outline-ring/50;
   }
 
+  body{
+    @apply h-full w-full overflow-x-clip;
+  }
+
 
   
 

@@ -9,6 +9,7 @@ import { useState } from "react"
 import { Checkbox } from "./ui/checkbox"
 import { Progress } from "./ui/progress"
 import { Input } from "./ui/input"
+import Link from "next/link"
 
 interface QuestionTableProps {
   questions: Question[]
@@ -173,14 +174,14 @@ export function QuestionTable({ questions }: QuestionTableProps) {
                   </TableCell>
                   <TableCell className="font-medium">{question.Title}</TableCell>
                   <TableCell>
-                    <a
+                    <Link
                       href={question.Link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-blue-600 hover:underline"
                     >
                       View <ExternalLink className="ml-1 h-3 w-3" />
-                    </a>
+                    </Link>
                   </TableCell>
                   <TableCell >
                     <Badge variant="secondary" className={getDifficultyColor(question.Difficulty)}>
