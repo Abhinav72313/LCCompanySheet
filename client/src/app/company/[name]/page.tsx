@@ -14,8 +14,19 @@ export default async function CompanyPage({
   params: Promise<{ name: string }>
 }) {
   const { name } = await params
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company/${name}`)
-  const companyQuestions: Question[] = await res.json()
+
+  let companyQuestions:Question[] = []
+
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company/${name}`)
+    companyQuestions = await res.json()
+
+  } catch (error) {
+    console.error(error)
+    return <div>No Questions Found for this Company</div>
+  }
+
+
   companyQuestions.forEach((question) => {
     question.Frequency = Number(question.Frequency)
   })

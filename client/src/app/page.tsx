@@ -2,15 +2,18 @@
 
 import { CompanyList } from "@/components/company-list"
 
-import { Skeleton } from "@/components/ui/skeleton"
-
 export default async function Home() {
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company_list`,{
-    cache:'force-cache'
-  })
-  const companies = await res.json()
+  let companies = []
 
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company_list`)
+    companies = await res.json()
+
+  } catch (error) {
+    console.error(error)
+
+  }
   return (
     <main className="container mx-auto py-10 px-4">
       <h1 className="text-4xl font-bold mb-8 text-center">Company Interview Questions Tracker</h1>
@@ -19,10 +22,6 @@ export default async function Home() {
         acceptance rates.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Skeleton className="h-full" />
-
-      </div>
 
       <CompanyList companies={companies} />
     </main>
