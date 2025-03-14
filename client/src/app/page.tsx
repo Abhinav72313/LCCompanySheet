@@ -9,7 +9,9 @@ export default async function Home() {
   let companies = []
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company_list`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company_list`, {
+      cache: 'no-store'
+    })
     companies = await res.json()
 
   } catch (error) {
@@ -23,14 +25,14 @@ export default async function Home() {
         Select a company to view their interview questions, including difficulty levels, topics, frequency, and
         acceptance rates.
       </p>
-      
-      <Link href={'https://github.com/Abhinav72313/LCCompanySheet'} target="_blank" className="hover:text-blue-500 shadow-lg text-white  border-2 h-36 w-56 absolute bg-black cursor-pointer -top-12 -right-24 p-4 rotate-45 flex flex-col items-center justify-end">
-      <GithubIcon className="h-10 w-10 "/>
-      </Link>
-     
 
+      <Link href={'https://github.com/Abhinav72313/LCCompanySheet'} target="_blank" className="hover:text-blue-500 shadow-lg text-white  border-2 h-36 w-56 absolute bg-black cursor-pointer -top-12 -right-24 p-4 rotate-45 flex flex-col items-center justify-end">
+        <GithubIcon className="h-10 w-10 " />
+      </Link>
 
       <CompanyList companies={companies} />
+
+
     </main>
   )
 }
