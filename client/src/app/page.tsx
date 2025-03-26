@@ -10,8 +10,9 @@ export default async function Home() {
 
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company_list`, {
-      cache: 'no-store'
+      signal: AbortSignal.timeout(60000)
     })
+
     companies = await res.json()
 
   } catch (error) {
