@@ -1,5 +1,3 @@
-
-
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { QuestionTable } from "@/components/question-table"
@@ -18,7 +16,9 @@ export default async function CompanyPage({
   let companyQuestions:Question[] = []
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company/${name}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company/${name}`,{
+      signal: AbortSignal.timeout(60000)
+    })
     companyQuestions = await res.json()
 
   } catch (error) {
@@ -26,12 +26,14 @@ export default async function CompanyPage({
     return <div>No Questions Found for this Company</div>
   }
 
-
   companyQuestions.forEach((question) => {
     question.Frequency = Number(question.Frequency)
   })
 
 
+  if(companyQuestions.length === 0) {
+    return <div>No Questions Found for this Company</div>
+  }
   return (
     <main className="container mx-auto py-10 px-4">
 
