@@ -1,23 +1,43 @@
 
-
-import { CompanyList } from "@/components/company-list"
-import { GithubIcon } from "lucide-react"
-import Link from "next/link"
+import { CompanyList } from "@/components/company-list";
+import db from "@/lib/mongodb";
+import { GithubIcon } from "lucide-react";
+import Link from "next/link";
 
 export default async function Home() {
 
-  let companies = []
+  let companiesWithProgress: { name: string; questionCount: number; questionIds: string[] }[] = []
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company_list`, {
-      signal: AbortSignal.timeout(60000)
-    })
-
-    companies = await res.json()
-
+    // Get companies with their question counts and question IDs using aggregation
+    const pipeline = [
+      {
+        $group: {
+          _id: "$Company",
+          count: { $sum: 1 },
+          questionIds: { $push: { $toString: "$_id" } }
+        }
+      },
+      {
+        $project: {
+          _id: 0,
+          name: "$_id",
+          questionCount: "$count",
+          questionIds: "$questionIds"
+        }
+      },
+      {
+        $sort: { name: 1 }
+      }
+    ]
+    
+    companiesWithProgress = await db
+      .collection("company_wise")
+      .aggregate(pipeline)
+      .toArray() as { name: string; questionCount: number; questionIds: string[] }[]
+      
   } catch (error) {
     console.error(error)
-
   }
   return (
     <main className="container mx-auto py-10 px-4">
@@ -31,7 +51,7 @@ export default async function Home() {
         <GithubIcon className="h-10 w-10 " />
       </Link>
 
-      <CompanyList companies={companies} />
+      <CompanyList companiesWithProgress={companiesWithProgress} />
 
 
     </main>

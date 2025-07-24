@@ -1,9 +1,25 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { QuestionTable } from "@/components/question-table"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
-import { ArrowLeft } from "lucide-react"
+import db from "@/lib/mongodb"
 import { Question } from "@/types/question"
+import { ArrowLeft } from "lucide-react"
+
+
+export async function generateStaticParams() {
+  try {
+    const companies = await db
+      .collection("company_wise")
+      .distinct("Company");
+
+    return companies.map((name) => ({ name }));
+
+  } catch (e) {
+    console.error(e);
+    return []
+  }
+}
 
 
 export default async function CompanyPage({
@@ -12,14 +28,21 @@ export default async function CompanyPage({
   params: Promise<{ name: string }>
 }) {
   const { name } = await params
+  const decodedName = decodeURIComponent(name)
 
-  let companyQuestions:Question[] = []
+  let companyQuestions: Question[] = []
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/company/${name}`,{
-      signal: AbortSignal.timeout(60000)
-    })
-    companyQuestions = await res.json()
+    // Query database directly for SSG instead of using fetch
+    const results = await db
+      .collection("company_wise")
+      .find({ Company: decodedName })
+      .toArray()
+    
+    companyQuestions = results.map((doc) => ({
+      ...doc,
+      _id: doc._id?.toString() || '',
+    })) as Question[]
 
   } catch (error) {
     console.error(error)
@@ -31,7 +54,7 @@ export default async function CompanyPage({
   })
 
 
-  if(companyQuestions.length === 0) {
+  if (companyQuestions.length === 0) {
     return <div>No Questions Found for this Company</div>
   }
   return (
@@ -44,13 +67,13 @@ export default async function CompanyPage({
             Back to Companies
           </Button>
         </Link>
-        <h1 className="text-4xl font-bold">{companyQuestions[0].Company.toUpperCase()}</h1>
+        <h1 className="text-4xl font-bold">{decodedName.toUpperCase()}</h1>
       </div>
 
       <div className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">Interview Questions</h2>
         <p className="text-muted-foreground">
-          {companyQuestions.length} questions found for {companyQuestions[0].Company}
+          {companyQuestions.length} questions found for {decodedName}
         </p>
       </div>
 

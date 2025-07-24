@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import type { Question } from "@/types/question"
 import { ChevronDown, ExternalLink, X } from "lucide-react"
-import { useState } from "react"
-import { Checkbox } from "./ui/checkbox"
-import { Progress } from "./ui/progress"
-import { Input } from "./ui/input"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import { Checkbox } from "./ui/checkbox"
+import { Input } from "./ui/input"
+import { Progress } from "./ui/progress"
 
 interface QuestionTableProps {
   questions: Question[]
@@ -21,6 +21,15 @@ export function QuestionTable({ questions }: QuestionTableProps) {
   const [searchQuery, setSearchQuery] = useState("")
   const [isChecked, setIsChecked] = useState(false)
   const [searchTopics,setSearchTopics] = useState<string[]>([])
+  const [completedQuestions, setCompletedQuestions] = useState<string[]>([])
+
+  // Initialize client-side state after hydration
+  useEffect(() => {
+    const completed = questions
+      .filter((question) => localStorage.getItem(question._id))
+      .map((question) => question._id)
+    setCompletedQuestions(completed)
+  }, [questions])
 
   const handleSort = (column: keyof Question) => {
     
@@ -34,8 +43,16 @@ export function QuestionTable({ questions }: QuestionTableProps) {
 
   const handleCheckboxChange = (questionId: string, isCheck: boolean) => {
     setIsChecked(!isChecked)
-    if(isCheck) localStorage.setItem(questionId,'true')
-    else  localStorage.removeItem(questionId)
+    if(isCheck) {
+      localStorage.setItem(questionId,'true')
+      setCompletedQuestions(prev => [...prev, questionId])
+    } else {
+      localStorage.removeItem(questionId)
+      setCompletedQuestions(prev => prev.filter(id => id !== questionId))
+    }
+    
+    // Trigger custom event to update company progress
+    window.dispatchEvent(new CustomEvent('questionCompleted'))
   }
 
   const filteredQuestions = questions.filter(
@@ -88,7 +105,6 @@ export function QuestionTable({ questions }: QuestionTableProps) {
     }
   }
 
-  const completedQuestions = questions.filter((question) => localStorage.getItem(question._id))
   const percentage = Math.round((completedQuestions.length / questions.length) * 100)
 
   return (
@@ -168,7 +184,7 @@ export function QuestionTable({ questions }: QuestionTableProps) {
                   <TableCell>
                     <Checkbox
                       className="cursor-pointer"
-                      checked={localStorage.getItem(question._id) ? true : false}
+                      checked={completedQuestions.includes(question._id)}
                       onCheckedChange={(e:boolean) => handleCheckboxChange(question._id,e)}
                     />
                   </TableCell>
