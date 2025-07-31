@@ -1,4 +1,4 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-HARD,Text Justification,100.0,0.4709379152348225,https://leetcode.com/problems/text-justification,"Array, String, Simulation"
-HARD,Word Break II,80.0,0.5293100615866503,https://leetcode.com/problems/word-break-ii,"Array, Hash Table, String, Dynamic Programming, Backtracking, Trie, Memoization"
-MEDIUM,Shortest Uncommon Substring in an Array,80.0,0.47286294579746974,https://leetcode.com/problems/shortest-uncommon-substring-in-an-array,"Array, Hash Table, String, Trie"
+MEDIUM,Shortest Uncommon Substring in an Array,100.0,0.4821341799216042,https://leetcode.com/problems/shortest-uncommon-substring-in-an-array,"Array, Hash Table, String, Trie"
+MEDIUM,Synonymous Sentences,93.4,0.5657701813916468,https://leetcode.com/problems/synonymous-sentences,"Array, Hash Table, String, Backtracking, Union Find"
+MEDIUM,Merge Intervals,84.0,0.4939520668150291,https://leetcode.com/problems/merge-intervals,"Array, Sorting"

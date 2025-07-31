@@ -1,2 +1,3 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-HARD,Merge k Sorted Lists,100.0,0.5579591740856451,https://leetcode.com/problems/merge-k-sorted-lists,"Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort"
+EASY,Roman to Integer,100.0,0.6486643502043604,https://leetcode.com/problems/roman-to-integer,"Hash Table, Math, String"
+MEDIUM,Flatten Nested List Iterator,100.0,0.6522845190469043,https://leetcode.com/problems/flatten-nested-list-iterator,"Stack, Tree, Depth-First Search, Design, Queue, Iterator"

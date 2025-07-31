@@ -1,4 +1,4 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-MEDIUM,Koko Eating Bananas,100.0,0.4882386406773344,https://leetcode.com/problems/koko-eating-bananas,"Array, Binary Search"
-MEDIUM,Ways to Split Array Into Good Subarrays,88.6,0.34318158833812507,https://leetcode.com/problems/ways-to-split-array-into-good-subarrays,"Array, Math, Dynamic Programming"
-MEDIUM,Edit Distance,88.6,0.5819004009146251,https://leetcode.com/problems/edit-distance,"String, Dynamic Programming"
+MEDIUM,Transform Array to All Equal Elements,100.0,0.315568937398068,https://leetcode.com/problems/transform-array-to-all-equal-elements,"Array, Greedy"
+MEDIUM,Course Schedule II,64.5,0.5342350029047974,https://leetcode.com/problems/course-schedule-ii,"Depth-First Search, Breadth-First Search, Graph, Topological Sort"
+MEDIUM,Sum of Subarray Minimums,64.5,0.3762351166424223,https://leetcode.com/problems/sum-of-subarray-minimums,"Array, Dynamic Programming, Stack, Monotonic Stack"

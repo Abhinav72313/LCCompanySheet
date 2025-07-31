@@ -1,4 +1,4 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-HARD,Maximize Subarray Sum After Removing All Occurrences of One Element,100.0,0.19437862570471443,https://leetcode.com/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element,"Array, Dynamic Programming, Segment Tree"
-HARD,Manhattan Distances of All Arrangements of Pieces,100.0,0.3549897922421039,https://leetcode.com/problems/manhattan-distances-of-all-arrangements-of-pieces,"Math, Combinatorics"
-HARD,Stamping the Grid,66.6,0.32717993700410664,https://leetcode.com/problems/stamping-the-grid,"Array, Greedy, Matrix, Prefix Sum"
+HARD,Find X Value of Array II,100.0,0.27419939577039276,https://leetcode.com/problems/find-x-value-of-array-ii,"Array, Math, Segment Tree"
+MEDIUM,Find X Value of Array I,100.0,0.3315965471654094,https://leetcode.com/problems/find-x-value-of-array-i,"Array, Math, Dynamic Programming"
+MEDIUM,Next Permutation,66.3,0.43057779910352356,https://leetcode.com/problems/next-permutation,"Array, Two Pointers"

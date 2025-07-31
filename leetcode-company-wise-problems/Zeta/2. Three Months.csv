@@ -1,4 +1,2 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-MEDIUM,Capacity To Ship Packages Within D Days,100.0,0.7138850494877583,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,"Array, Binary Search"
-HARD,Trapping Rain Water,100.0,0.6428758555513079,https://leetcode.com/problems/trapping-rain-water,"Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack"
-MEDIUM,Count Univalue Subtrees,100.0,0.5696930562759565,https://leetcode.com/problems/count-univalue-subtrees,"Tree, Depth-First Search, Binary Tree"
+HARD,Split Array Largest Sum,100.0,0.5809965654277032,https://leetcode.com/problems/split-array-largest-sum,"Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum"

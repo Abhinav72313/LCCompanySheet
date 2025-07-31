@@ -1,4 +1,4 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-EASY,Most Common Word,100.0,0.4448633280451142,https://leetcode.com/problems/most-common-word,"Array, Hash Table, String, Counting"
-EASY,Maximum Depth of N-ary Tree,95.9,0.727825242176896,https://leetcode.com/problems/maximum-depth-of-n-ary-tree,"Tree, Depth-First Search, Breadth-First Search"
-EASY,Valid Word Abbreviation,90.8,0.3661181400638188,https://leetcode.com/problems/valid-word-abbreviation,"Two Pointers, String"
+EASY,Valid Word Abbreviation,100.0,0.3685165676961013,https://leetcode.com/problems/valid-word-abbreviation,"Two Pointers, String"
+MEDIUM,Coin Change,100.0,0.46495504462798637,https://leetcode.com/problems/coin-change,"Array, Dynamic Programming, Breadth-First Search"
+MEDIUM,Design Circular Queue,100.0,0.5264418239354727,https://leetcode.com/problems/design-circular-queue,"Array, Linked List, Design, Queue"

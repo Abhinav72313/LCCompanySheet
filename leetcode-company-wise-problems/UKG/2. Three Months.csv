@@ -1,3 +1,4 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-MEDIUM,Maximum Area Rectangle With Point Constraints I,100.0,0.5118608786157249,https://leetcode.com/problems/maximum-area-rectangle-with-point-constraints-i,"Array, Math, Binary Indexed Tree, Segment Tree, Geometry, Sorting, Enumeration"
-MEDIUM,Count the Number of Good Subsequences,76.6,0.520434557682359,https://leetcode.com/problems/count-the-number-of-good-subsequences,"Hash Table, Math, String, Combinatorics, Counting"
+MEDIUM,Make a Positive Array,100.0,0.3808630393996248,https://leetcode.com/problems/make-a-positive-array,"Array, Greedy, Prefix Sum"
+MEDIUM,Minimum Length of Anagram Concatenation,100.0,0.3972463749502319,https://leetcode.com/problems/minimum-length-of-anagram-concatenation,"Hash Table, String, Counting"
+HARD,Special Binary String,100.0,0.6351450158420667,https://leetcode.com/problems/special-binary-string,"String, Recursion"

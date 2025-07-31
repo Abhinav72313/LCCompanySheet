@@ -1,2 +1,2 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-EASY,Longest Common Prefix,100.0,0.44887997810777447,https://leetcode.com/problems/longest-common-prefix,"String, Trie"
+MEDIUM,Remove All Adjacent Duplicates in String II,100.0,0.5960173343469628,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,"String, Stack"

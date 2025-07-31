@@ -1,2 +1,2 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-HARD,Reverse Nodes in k-Group,100.0,0.6204666937039588,https://leetcode.com/problems/reverse-nodes-in-k-group,"Linked List, Recursion"
+MEDIUM,Boats to Save People,100.0,0.6030116770111661,https://leetcode.com/problems/boats-to-save-people,"Array, Two Pointers, Greedy, Sorting"

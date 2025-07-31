@@ -1,10 +1,8 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-MEDIUM,Rank Teams by Votes,100.0,0.5895344320514955,https://leetcode.com/problems/rank-teams-by-votes,"Array, Hash Table, String, Sorting, Counting"
-MEDIUM,Stock Price Fluctuation ,84.5,0.4870816430020284,https://leetcode.com/problems/stock-price-fluctuation,"Hash Table, Design, Heap (Priority Queue), Data Stream, Ordered Set"
-EASY,Find the Width of Columns of a Grid,79.7,0.6875768757687577,https://leetcode.com/problems/find-the-width-of-columns-of-a-grid,"Array, Matrix"
-MEDIUM,Design Snake Game,70.3,0.39006983608509627,https://leetcode.com/problems/design-snake-game,"Array, Hash Table, Design, Queue, Simulation"
-MEDIUM,The Time When the Network Becomes Idle,66.9,0.5299695831096797,https://leetcode.com/problems/the-time-when-the-network-becomes-idle,"Array, Breadth-First Search, Graph"
-HARD,Russian Doll Envelopes,62.8,0.3719137919994145,https://leetcode.com/problems/russian-doll-envelopes,"Array, Binary Search, Dynamic Programming, Sorting"
-MEDIUM,Nth Highest Salary,50.0,0.3791099023163122,https://leetcode.com/problems/nth-highest-salary,Database
-HARD,Text Justification,50.0,0.47093296579330096,https://leetcode.com/problems/text-justification,"Array, String, Simulation"
-EASY,Logger Rate Limiter,50.0,0.7635636890458137,https://leetcode.com/problems/logger-rate-limiter,"Hash Table, Design, Data Stream"
+MEDIUM,Stock Price Fluctuation ,100.0,0.4816387154783381,https://leetcode.com/problems/stock-price-fluctuation,"Hash Table, Design, Heap (Priority Queue), Data Stream, Ordered Set"
+MEDIUM,Meeting Rooms II,93.8,0.5214164447683243,https://leetcode.com/problems/meeting-rooms-ii,"Array, Two Pointers, Greedy, Sorting, Heap (Priority Queue), Prefix Sum"
+HARD,All O`one Data Structure,85.0,0.44134779761452186,https://leetcode.com/problems/all-oone-data-structure,"Hash Table, Linked List, Design, Doubly-Linked List"
+MEDIUM,Design Snake Game,78.7,0.3968485567576451,https://leetcode.com/problems/design-snake-game,"Array, Hash Table, Design, Queue, Simulation"
+MEDIUM,High-Access Employees,78.7,0.46126369648115073,https://leetcode.com/problems/high-access-employees,"Array, Hash Table, String, Sorting"
+MEDIUM,Lowest Common Ancestor of a Binary Tree,69.9,0.6675501387816432,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree,"Tree, Depth-First Search, Binary Tree"
+MEDIUM,Koko Eating Bananas,69.9,0.49067280156684456,https://leetcode.com/problems/koko-eating-bananas,"Array, Binary Search"

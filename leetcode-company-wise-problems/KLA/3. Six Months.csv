@@ -1,4 +1,4 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-HARD,Reaching Points,100.0,0.3355144032921811,https://leetcode.com/problems/reaching-points,Math
-MEDIUM,LRU Cache,100.0,0.44431378020948914,https://leetcode.com/problems/lru-cache,"Hash Table, Linked List, Design, Doubly-Linked List"
-EASY,Two Sum,89.7,0.5507399961014207,https://leetcode.com/problems/two-sum,"Array, Hash Table"
+MEDIUM,Maximum Product of First and Last Elements of a Subsequence,100.0,0.29763143653998253,https://leetcode.com/problems/maximum-product-of-first-and-last-elements-of-a-subsequence,"Array, Two Pointers"
+MEDIUM,LRU Cache,73.8,0.4521493519744642,https://leetcode.com/problems/lru-cache,"Hash Table, Linked List, Design, Doubly-Linked List"
+HARD,Find Median from Data Stream,73.8,0.5327802546186611,https://leetcode.com/problems/find-median-from-data-stream,"Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream"

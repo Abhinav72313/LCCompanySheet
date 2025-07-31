@@ -1,2 +1,2 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-MEDIUM,Loud and Rich,100.0,0.6100672133919514,https://leetcode.com/problems/loud-and-rich,"Array, Depth-First Search, Graph, Topological Sort"
+MEDIUM,Rotting Oranges,100.0,0.5661841672935807,https://leetcode.com/problems/rotting-oranges,"Array, Breadth-First Search, Matrix"

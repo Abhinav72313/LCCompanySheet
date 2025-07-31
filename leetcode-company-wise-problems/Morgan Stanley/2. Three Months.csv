@@ -1,2 +1,3 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-EASY,Best Time to Buy and Sell Stock,100.0,0.5476983765752247,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Array, Dynamic Programming"
+MEDIUM,Make K-Subarray Sums Equal,100.0,0.3661727523960722,https://leetcode.com/problems/make-k-subarray-sums-equal,"Array, Math, Greedy, Sorting, Number Theory"
+MEDIUM,Minimum Operations to Reduce X to Zero,100.0,0.40063692467140904,https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero,"Array, Hash Table, Binary Search, Sliding Window, Prefix Sum"

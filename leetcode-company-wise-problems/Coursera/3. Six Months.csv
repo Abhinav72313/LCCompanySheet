@@ -1,2 +1,2 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-MEDIUM,Rank Teams by Votes,100.0,0.5895363999556098,https://leetcode.com/problems/rank-teams-by-votes,"Array, Hash Table, String, Sorting, Counting"
+HARD,Text Justification,100.0,0.4815044448867509,https://leetcode.com/problems/text-justification,"Array, String, Simulation"

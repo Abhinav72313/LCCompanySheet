@@ -1,2 +1,4 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-MEDIUM,Container With Most Water,100.0,0.5717353582490575,https://leetcode.com/problems/container-with-most-water,"Array, Two Pointers, Greedy"
+EASY,Two Sum,100.0,0.5577700049096483,https://leetcode.com/problems/two-sum,"Array, Hash Table"
+EASY,Valid Parentheses,89.2,0.423228521307745,https://leetcode.com/problems/valid-parentheses,"String, Stack"
+MEDIUM,Maximum Subarray,89.2,0.5209980853471033,https://leetcode.com/problems/maximum-subarray,"Array, Divide and Conquer, Dynamic Programming"

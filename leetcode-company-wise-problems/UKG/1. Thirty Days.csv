@@ -1,2 +1,2 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-MEDIUM,Count the Number of Good Subsequences,100.0,0.520434557682359,https://leetcode.com/problems/count-the-number-of-good-subsequences,"Hash Table, Math, String, Combinatorics, Counting"
+HARD,Special Binary String,100.0,0.6351450158420667,https://leetcode.com/problems/special-binary-string,"String, Recursion"

@@ -1,5 +1,7 @@
 Difficulty,Title,Frequency,Acceptance Rate,Link,Topics
-HARD,String Transformation,100.0,0.30690389819773134,https://leetcode.com/problems/string-transformation,"Math, String, Dynamic Programming, String Matching"
-EASY,Count Vowel Substrings of a String,100.0,0.6991177568100645,https://leetcode.com/problems/count-vowel-substrings-of-a-string,"Hash Table, String"
-MEDIUM,Most Profitable Path in a Tree,100.0,0.6807515945526633,https://leetcode.com/problems/most-profitable-path-in-a-tree,"Array, Tree, Depth-First Search, Breadth-First Search, Graph"
-EASY,Happy Number,100.0,0.5756148228328275,https://leetcode.com/problems/happy-number,"Hash Table, Math, Two Pointers"
+MEDIUM,Find All Anagrams in a String,100.0,0.5220071349201708,https://leetcode.com/problems/find-all-anagrams-in-a-string,"Hash Table, String, Sliding Window"
+MEDIUM,Max Area of Island,100.0,0.7316419811417654,https://leetcode.com/problems/max-area-of-island,"Array, Depth-First Search, Breadth-First Search, Union Find, Matrix"
+MEDIUM,Throne Inheritance,100.0,0.6509835499827448,https://leetcode.com/problems/throne-inheritance,"Hash Table, Tree, Depth-First Search, Design"
+EASY,Two Sum,100.0,0.557770016057161,https://leetcode.com/problems/two-sum,"Array, Hash Table"
+EASY,Happy Number,100.0,0.580726470983853,https://leetcode.com/problems/happy-number,"Hash Table, Math, Two Pointers"
+MEDIUM,Copy List with Random Pointer,100.0,0.6053673680169267,https://leetcode.com/problems/copy-list-with-random-pointer,"Hash Table, Linked List"
