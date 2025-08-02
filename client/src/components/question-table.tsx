@@ -213,16 +213,17 @@ export function QuestionTable({ questions }: QuestionTableProps) {
                           }else{
                             setSearchTopics([...searchTopics,Topic])
                           }
-                        }} className={`text-xs cursor-pointer hover:bg-primary/20 ${searchTopics.includes(Topic) ? 'bg-primary text-white' : 'text-primary'}`}>
+                        }} className={`text-xs cursor-pointer hover:bg-primary/20 ${searchTopics.includes(Topic) ? 'bg-primary text-secondary' : 'text-primary'}`}>
                           {Topic}
                         </Badge>
                       ))}
                     </div>
                   </TableCell>
                   <TableCell>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                    <Progress value={question.Frequency} />
+                    {/* <div className="w-full bg-gray-200 rounded-full h-2.5">
                       <div className="bg-primary h-2.5 rounded-full" style={{ width: `${question.Frequency}%` }}></div>
-                    </div>
+                    </div> */}
                     <span className="text-xs text-muted-foreground">{question.Frequency}%</span>
                   </TableCell>
                   <TableCell>
