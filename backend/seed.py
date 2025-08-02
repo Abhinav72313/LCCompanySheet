@@ -14,7 +14,9 @@ except Exception as e:
     print(e)
     exit(0)
 
+
 client = db.get_collection('company_wise')
+client.delete_many({})
 
 questoins = []
 
@@ -23,7 +25,7 @@ for dirpath,dirname,filenames in os.walk('../leetcode-company-wise-problems/'):
     if dirpath.startswith('../leetcode-company-wise-problems/.git') or dirpath.startswith('./.idea') or dirpath == '../leetcode-company-wise-problems/':
         continue
 
-    with open(os.path.join(dirpath,'5. All.csv')) as f:
+    with open(os.path.join(dirpath,'4. More Than Six Months.csv')) as f:
         reader = csv.reader(f)
         for row in reader:
 
